@@ -4,6 +4,7 @@
 </script>
 
 <main>
+    
 	<div id="facecard" class="flex flex-col sm:flex-row items-center justify-center min-h-screen">
 		<div class="w-full max-w-150 mr-20 ml-20 mb-20">
 			<enhanced:img
@@ -14,24 +15,35 @@
 		</div>
 
 		<div>
-			<p class="text-3xl">Pablo Hendrickx</p>
+			<p class="text-5xl">Pablo Hendrickx</p>
 			<p class="text-2xl">Site Reliability Engineer</p>
 			<p>SRE with expertise in data systems, IoT and video streaming. 7 Years of experience.</p>
 		</div>
 	</div>
-	<div id="timeline" class="flex items-center min-h-screen justify-center">
-
-<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+<div id ="banner">
+<div class="grid h-20 grid-cols-[1fr_auto_auto_auto_auto_auto_auto_1fr] items-center gap-4">
+    <span class="vr border-l-2"></span>
+    <p class="text-1g">ISO-27001 Expertise</p>
+    <span class="vr border-l-2"></span>
+    <p class="text-1g">SRE team lead</p>
+    <span class="vr border-l-2"></span>
+    <p class="text-1g">Achieved 30% infra cost reduction</p>
+    <span class="vr border-l-2"></span>
+    <p class="text-1g">Succesfuly enhanced Observability</p>
+</div>
+</div>
+<div id="timeline" class="flex items-center min-h-screen justify-center">
+<ol class="ml-10 relative border-s border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ms-4">
         <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
         <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2024+</time>
 		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Atlas Copco, Belgium</h3>
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Site Reliability Engineer SmartLink</h3>
 		<p class="text-base font-normal text-gray-500 dark:text-gray-400">SmartLink connects 350k+ heavy duty air compressors to an app which allows customers to see enriched information and proactively service their machines.</p>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Rolled out structured postmortems, streamlined incident management and response, trained on-call engineers.</p>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Drove ISO-27001 certification efforts by participating in audit interviews, creating and testing a disaster recovery plan, collecting evidence of compliance, </p>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">creating and enforcing user role management policy and secure development policies.</p>
-		<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Implemented OpenTelemetry and monitoring tool to enhance application performance monitoring,</p>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Led the SRE team, driving critical objectives, mentoring junior engineers, and prioritizing high-impact work.</p>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Rolled out structured postmortems, streamlined incident management and response, trained on-call engineers.</p>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Spearheaded ISO 27001 certification: led audit interviews, developed/tested the disaster recovery plan, gathered compliance evidence, and established user role and secure development policies.</p>
+		<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Implemented OpenTelemetry and monitoring tool to enhance application performance monitoring.</p>
 	</li>
     <li class="mb-10 ms-4">
         <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -62,5 +74,7 @@
     </li>
 </ol>
 
+</div>
+<div id="form" class="flex items-center min-h-screen justify-center">
 </div>
 </main>
