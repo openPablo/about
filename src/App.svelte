@@ -1,10 +1,11 @@
 <script lang="ts">
-  
+  import { Avatar } from '@skeletonlabs/skeleton-svelte';
+
 </script>
 
 <main>
-	<div id="facecard" class="flex items-center min-h-screen">
-		<div class="w-full max-w-150 mr-20 ml-20">
+	<div id="facecard" class="flex flex-col sm:flex-row items-center justify-center min-h-screen">
+		<div class="w-full max-w-150 mr-20 ml-20 mb-20">
 			<enhanced:img
 				src="./assets/profile.jpeg"
 				alt="profile picture of an sre with his baby"
@@ -18,7 +19,48 @@
 			<p>SRE with expertise in data systems, IoT and video streaming. 7 Years of experience.</p>
 		</div>
 	</div>
-	<div id="timeline" class="flex items-center min-h-screen">
+	<div id="timeline" class="flex items-center min-h-screen justify-center">
 
-  </div>
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2024+</time>
+		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Atlas Copco, Belgium</h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Site Reliability Engineer SmartLink</h3>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">SmartLink connects 350k+ heavy duty air compressors to an app which allows customers to see enriched information and proactively service their machines.</p>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Rolled out structured postmortems, streamlined incident management and response, trained on-call engineers.</p>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Drove ISO-27001 certification efforts by participating in audit interviews, creating and testing a disaster recovery plan, collecting evidence of compliance, </p>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">creating and enforcing user role management policy and secure development policies.</p>
+		<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Implemented OpenTelemetry and monitoring tool to enhance application performance monitoring,</p>
+	</li>
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2022</time>
+		<h3 class="text-base font-semibold text-gray-500 dark:text-white">DPG Media, Belgium</h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Site Reliability Engineer, Streaming Area</h3>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">SRE for streaming platforms streamz.be and vtmgo.be which have over a million monthly users.</p>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Incident response and management.</p>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Led AWS and Akamai cost-saving initiatives, achieving a 30% reduction for my teams.</p>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Created a custom Terraform provider in Go for internal APIs.</p>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Built and managed an observability stack which was used by 10+ dev teams.</p>
+    </li>
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">March 2021</time>
+		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Nubera, Belgium</h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">DevOps Engineer Consultant, Keytrade bank </h3>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Created a self-service platform using the GitLab ecosystem (CI/CD, AWS, Terraform modules)</p>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Maintained Kubernetes clusters, Helm charts,infra-as-code, CI/CD.</p>
+    </li>
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Feb 2018</time>
+		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Cronos groep, Belgium</h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">PostgreSQL DBA</h3>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Created high-available on-premise PostgreSQL setups.</p>
+		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Oracle to PostgreSQL migrations to enable massive cost savings.</p>
+    </li>
+</ol>
+
+</div>
 </main>
