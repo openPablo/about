@@ -21,7 +21,7 @@
 		</div>
 	</div>
 <div id ="banner">
-<div class=" bg-secondary-400 grid h-60 grid-cols-[1fr_auto_auto_auto_auto_auto_auto_auto_1fr] items-center gap-4">
+<div class="bg-primary-100 dark:bg-secondary-300 grid h-60 grid-cols-[1fr_auto_auto_auto_auto_auto_auto_auto_1fr] items-center gap-4">
 <p></p>
     <p class="text-1g">Achieved ISO-27001</p>
     <span class="vr h-20 border-l-2"></span>
@@ -75,17 +75,30 @@
 </ol>
 
 </div>
-<div id="form" class="flex items-center justify-center">
-<form>
-<label class="label">
-  <span class="label-text">Your email</span>
-  <input class="input" type="text" placeholder="anon@gmail.com" />
-</label>
-<label class="label mb-40 ">
-  <span class="label-text">Message</span>
-  <textarea class="textarea mb-4" rows="4" placeholder="Lets connect :)"></textarea>
-  <button type="button" class="btn preset-filled">Mail</button>
-</label>
-</form>
+<div id="form" class="flex items-center justify-center mb-40">
+  <form method="POST" class="w-full max-w-lg bg-primary-100 dark:bg-secondary-400 p-8 rounded-lg shadow-md">
+    <label class="form-control w-full mb-6">
+      <span class="label-text block mb-2 font-semibold">Your email</span>
+      <input
+        class="input input-bordered w-full"
+        name="email"
+        type="text"
+        placeholder="anon@gmail.com"
+      />
+    </label>
+
+    <label class="form-control w-full mb-6">
+      <span class="label-text block mb-2 font-semibold">Message</span>
+      <textarea
+        class="textarea textarea-bordered w-full mb-4"
+        name="message"
+        rows="8"
+        placeholder="Let's connect :)"
+      ></textarea>
+    </label>
+        <div class="flex justify-center">
+    <button type="submit" class="btn preset-filled">Mail</button>
+    </div>
+  </form>
 </div>
 </main>
