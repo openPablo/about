@@ -1,6 +1,52 @@
 <script lang="ts">
-  const workingStartDate = "2018-02-01"
-  let yearsOfExperience = new Date().getYear() - new Date(workingStartDate).getYear()
+    import TimeLineItem from './TimelineItem.svelte'
+
+    const workingStartDate = "2018-02-01"
+    let yearsOfExperience = new Date().getYear() - new Date(workingStartDate).getYear()
+    let timeLineItems = [
+        {
+            date: "Aug 2024+",
+            employer: "Atlas Copco, Belgium",
+            title: "Site Reliability Engineer SmartLink",
+            notes: [
+                "SmartLink connects 350k+ heavy duty air compressors to an app which allows customers to see enriched information and proactively service their machines.",
+                "Led the SRE team, driving critical objectives, mentoring junior engineers, and prioritizing high-impact work.",
+                "Rolled out structured postmortems, streamlined incident management and response, trained on-call engineers.",
+                "Spearheaded ISO 27001 certification: led audit interviews, developed/tested the disaster recovery plan, gathered compliance evidence, and established user role and secure development policies.",
+                "Implemented OpenTelemetry and monitoring tool to enhance application performance monitoring."
+            ]
+        },
+        {
+            date: "Jan 2022",
+            employer: "DPG Media, Belgium",
+            title: "Site Reliability Engineer, Streaming Area",
+            notes: [
+                "SRE for streaming platforms streamz.be and vtmgo.be which have over a million monthly users.",
+                "Incident response and management.",
+                "Led AWS and Akamai cost-saving initiatives, achieving a 30% reduction for my teams.",
+                "Created a custom Terraform provider in Go for internal APIs.",
+                "Built and managed an observability stack which was used by 10+ dev teams."
+            ]
+        },
+        {
+            date: "March 2021",
+            employer: "Nubera, Belgium",
+            title: "DevOps Engineer Consultant, Keytrade bank",
+            notes: [
+                "Created a self-service platform using the GitLab ecosystem (CI/CD, AWS, Terraform modules).",
+                "Maintained Kubernetes clusters, Helm charts, infra-as-code, CI/CD."
+            ]
+        },
+        {
+            date: "Feb 2018",
+            employer: "Cronos groep, Belgium",
+            title: "PostgreSQL DBA",
+            notes: [
+                "Created high-available on-premise PostgreSQL setups.",
+                "Oracle to PostgreSQL migrations to enable massive cost savings."
+            ]
+        }
+    ];
 </script>
 
 <main>
@@ -34,44 +80,14 @@
 </div>
 <div id="timeline" class="flex items-center min-h-screen justify-center">
 <ol class="ml-10 relative border-s border-gray-200 dark:border-gray-700">                  
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2024+</time>
-		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Atlas Copco, Belgium</h3>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Site Reliability Engineer SmartLink</h3>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">SmartLink connects 350k+ heavy duty air compressors to an app which allows customers to see enriched information and proactively service their machines.</p>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Led the SRE team, driving critical objectives, mentoring junior engineers, and prioritizing high-impact work.</p>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Rolled out structured postmortems, streamlined incident management and response, trained on-call engineers.</p>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Spearheaded ISO 27001 certification: led audit interviews, developed/tested the disaster recovery plan, gathered compliance evidence, and established user role and secure development policies.</p>
-		<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Implemented OpenTelemetry and monitoring tool to enhance application performance monitoring.</p>
-	</li>
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2022</time>
-		<h3 class="text-base font-semibold text-gray-500 dark:text-white">DPG Media, Belgium</h3>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Site Reliability Engineer, Streaming Area</h3>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">SRE for streaming platforms streamz.be and vtmgo.be which have over a million monthly users.</p>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Incident response and management.</p>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Led AWS and Akamai cost-saving initiatives, achieving a 30% reduction for my teams.</p>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Created a custom Terraform provider in Go for internal APIs.</p>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Built and managed an observability stack which was used by 10+ dev teams.</p>
-    </li>
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">March 2021</time>
-		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Nubera, Belgium</h3>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">DevOps Engineer Consultant, Keytrade bank </h3>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Created a self-service platform using the GitLab ecosystem (CI/CD, AWS, Terraform modules)</p>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Maintained Kubernetes clusters, Helm charts,infra-as-code, CI/CD.</p>
-    </li>
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Feb 2018</time>
-		<h3 class="text-base font-semibold text-gray-500 dark:text-white">Cronos groep, Belgium</h3>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">PostgreSQL DBA</h3>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Created high-available on-premise PostgreSQL setups.</p>
-		<p class="text-base font-normal text-gray-500 dark:text-gray-400">Oracle to PostgreSQL migrations to enable massive cost savings.</p>
-    </li>
+    {#each timeLineItems as item}
+        <TimeLineItem 
+            date={item.date}
+            employer={item.employer}
+            title={item.title}
+            notes={item.notes}
+        />
+    {/each}
 </ol>
 
 </div>
@@ -81,7 +97,7 @@
       <span class="label-text block mb-2 font-semibold">Your email</span>
       <input
         class="input input-bordered w-full"
-        name="email"
+        name="sender"
         type="text"
         placeholder="anon@gmail.com"
       />
