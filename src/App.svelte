@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { Avatar } from '@skeletonlabs/skeleton-svelte';
-
+  const workingStartDate = "2018-02-01"
+  let yearsOfExperience = new Date().getYear() - new Date(workingStartDate).getYear()
 </script>
 
 <main>
-    
+  
 	<div id="facecard" class="flex flex-col sm:flex-row items-center justify-center min-h-screen">
 		<div class="w-full max-w-150 mr-20 ml-20 mb-20">
 			<enhanced:img
@@ -17,18 +17,18 @@
 		<div>
 			<p class="text-5xl">Pablo Hendrickx</p>
 			<p class="text-2xl">Site Reliability Engineer</p>
-			<p>SRE with expertise in data systems, IoT and video streaming. 7 Years of experience.</p>
+			<p>SRE with expertise in data systems, IoT and video streaming. {yearsOfExperience} Years of experience.</p>
 		</div>
 	</div>
 <div id ="banner">
-<div class="grid h-20 grid-cols-[1fr_auto_auto_auto_auto_auto_auto_1fr] items-center gap-4">
-    <span class="vr border-l-2"></span>
-    <p class="text-1g">ISO-27001 Expertise</p>
-    <span class="vr border-l-2"></span>
+<div class=" bg-secondary-400 grid h-60 grid-cols-[1fr_auto_auto_auto_auto_auto_auto_auto_1fr] items-center gap-4">
+<p></p>
+    <p class="text-1g">Got ISO-27001</p>
+    <span class="vr h-20 border-l-2"></span>
     <p class="text-1g">SRE team lead</p>
-    <span class="vr border-l-2"></span>
+    <span class="vr h-20 border-l-2"></span>
     <p class="text-1g">Achieved 30% infra cost reduction</p>
-    <span class="vr border-l-2"></span>
+    <span class="vr h-20 border-l-2"></span>
     <p class="text-1g">Succesfuly enhanced Observability</p>
 </div>
 </div>
