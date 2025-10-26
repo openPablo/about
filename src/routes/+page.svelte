@@ -1,7 +1,10 @@
 <script lang="ts">
     import TimeLineItem from './TimelineItem.svelte'
     import { timeLineItems } from '$lib/data/timeLineItems.ts';
+    import type { PageProps } from './$types';
+    import { enhance } from '$app/forms';
 
+	  let { data, form }: PageProps = $props();
     const workingStartDate = "2018-02-01"
     let yearsOfExperience = new Date().getYear() - new Date(workingStartDate).getYear()
 
@@ -13,7 +16,7 @@
 		<div class="w-full max-w-150 mr-20 ml-20 mb-20">
 			<enhanced:img
 				src="$lib/assets/profile.png"
-				alt="profile picture of an sre with his baby"
+				alt="An sre with his baby"
 				class="w-full h-full object-cover rounded-md"
 			/>
 		</div>
@@ -29,11 +32,11 @@
 <p></p>
     <p class="text-1g">Achieved ISO-27001</p>
     <span class="vr h-20 border-l-2"></span>
-    <p class="text-1g">Solved database performance issues</p>
+    <p class="text-1g">Erradicated database perf issues</p>
     <span class="vr h-20 border-l-2"></span>
     <p class="text-1g">Achieved 30% infra cost reduction</p>
     <span class="vr h-20 border-l-2"></span>
-    <p class="text-1g">Implemented Observability</p>
+    <p class="text-1g">Built custom observability for apps</p>
 </div>
 </div>
 <div id="timeline" class="flex items-center min-h-screen justify-center">
@@ -50,7 +53,15 @@
 
 </div>
 <div id="form" class="flex items-center justify-center mb-40">
-  <form method="POST" class="w-full max-w-lg bg-primary-100 dark:bg-secondary-400 p-8 rounded-lg shadow-md">
+  <form 
+    method="POST"
+    class="w-full max-w-lg bg-primary-100 dark:bg-secondary-400 p-8 rounded-lg shadow-md"
+  	use:enhance={() => {
+		return async ({ update }) => {
+      await update({ reset: false });  
+		};
+	}}
+  >
     <label class="form-control w-full mb-6">
       <span class="label-text block mb-2 font-semibold">Your email</span>
       <input
@@ -60,7 +71,6 @@
         placeholder="anon@gmail.com"
       />
     </label>
-
     <label class="form-control w-full mb-6">
       <span class="label-text block mb-2 font-semibold">Message</span>
       <textarea
@@ -70,9 +80,14 @@
         placeholder="Let's connect :)"
       ></textarea>
     </label>
-        <div class="flex justify-center">
-    <button type="submit" class="btn preset-filled">Mail</button>
+    <div class="flex justify-center">
+      <button type="submit" class="btn preset-filled">Mail</button>
     </div>
+    
+    {#if form?.success}
+        <p in:fade={{ duration: 200 }}>Contact request sent! 🎉</p>
+    {/if}
   </form>
+
 </div>
 </main>

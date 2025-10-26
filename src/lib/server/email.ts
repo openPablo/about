@@ -10,7 +10,7 @@ const mailgun = new Mailgun(FormData);
 const mg = mailgun.client({
   username: "api",
   key: MAILGUN_API_KEY,
-  url: MAILGUN_API_URL,
+  url: MAILGUN_API_URL
 });
 
 export async function sendContactformMail(sender: string, message: string) {
@@ -25,16 +25,12 @@ export async function sendConfirmationMail(sender: string, message: string) {
 }
 
 async function sendMail(to: string, subject: string, text: string) {
-  try {
-    const data = await mg.messages.create("", {
+    const data = await mg.messages.create(MAILGUN_DOMAIN, {
       from: `Pabske <pabske@${MAILGUN_DOMAIN}>`,
       to: [to],
       subject: subject,
       text: text,
-    });
-    console.log(data);
-  } catch (error) {
-    console.log(`to: ${to}, subject: ${subject}, text: ${text}`);
-    console.log(error);
-  }
+    })
+    .then(msg => console.log(msg))
+    .catch(err => console.error(err));
 }
