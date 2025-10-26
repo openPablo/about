@@ -8,7 +8,7 @@
 	<div id="facecard" class="flex flex-col sm:flex-row items-center justify-center min-h-screen">
 		<div class="w-full max-w-150 mr-20 ml-20 mb-20">
 			<enhanced:img
-				src="./assets/profile.jpeg"
+				src="$lib/assets/profile.png"
 				alt="profile picture of an sre with his baby"
 				class="w-full h-full object-cover rounded-md"
 			/>
@@ -23,13 +23,13 @@
 <div id ="banner">
 <div class=" bg-secondary-400 grid h-60 grid-cols-[1fr_auto_auto_auto_auto_auto_auto_auto_1fr] items-center gap-4">
 <p></p>
-    <p class="text-1g">Got ISO-27001</p>
+    <p class="text-1g">Achieved ISO-27001</p>
     <span class="vr h-20 border-l-2"></span>
-    <p class="text-1g">SRE team lead</p>
+    <p class="text-1g">Solved database performance issues</p>
     <span class="vr h-20 border-l-2"></span>
     <p class="text-1g">Achieved 30% infra cost reduction</p>
     <span class="vr h-20 border-l-2"></span>
-    <p class="text-1g">Succesfuly enhanced Observability</p>
+    <p class="text-1g">Implemented Observability</p>
 </div>
 </div>
 <div id="timeline" class="flex items-center min-h-screen justify-center">
@@ -75,6 +75,17 @@
 </ol>
 
 </div>
-<div id="form" class="flex items-center min-h-screen justify-center">
+<div id="form" class="flex items-center justify-center">
+<form>
+<label class="label">
+  <span class="label-text">Your email</span>
+  <input class="input" type="text" placeholder="anon@gmail.com" />
+</label>
+<label class="label mb-40 ">
+  <span class="label-text">Message</span>
+  <textarea class="textarea mb-4" rows="4" placeholder="Lets connect :)"></textarea>
+  <button type="button" class="btn preset-filled">Mail</button>
+</label>
+</form>
 </div>
 </main>
